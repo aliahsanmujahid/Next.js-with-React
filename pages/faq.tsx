@@ -47,7 +47,7 @@ const Faq: NextPage<IPropTypes> = ({ data }) => {
   
     <Layout>
 
-<div className="mx-auto pt-[75px] md:pt-[130px]">
+<div className="mx-auto pt-[75px] md:pt-[150px]">
         
 
         <div className="lists text-center">

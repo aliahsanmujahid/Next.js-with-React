@@ -9,16 +9,11 @@ export default function Footer() {
 <div className="p-[15px] bg-[#0094E7]"></div>
 
 <div className="w-[98%] sm:w-[95%] m-auto mx-auto pt-12 theme_h3">
-    <div className="w-[100%] grid grid-cols-1 md:grid-cols-4 ">
-        <div className="w-[100%] justify-center">
+    <div className="w-[100%] grid grid-cols-1 md:grid-cols-5 ">
+        <div className="w-[100%] justify-center md:col-span-2">
             <div className='flex justify-center'>
             <Link legacyBehavior href='/home'>
-               <Image    
-                  src={"/images/mlogo.png" }
-                  alt="midnight city"
-                  width={150}
-                 height={50}
-                />
+            <img className="w-[60%] m-auto" src="/images/mlogo.png" alt="" />
             </Link>
             </div>
             <div className="pt-4 ">
@@ -29,7 +24,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <div className="w-[100%] text-center md:text-left overflow-hidden flex flex-col gap-3 justify-items-left  pt-4 md:pt-0">
+        <div className="w-[100%] md:col-span-1 text-center md:text-left overflow-hidden flex flex-col gap-3 justify-items-left  pt-4 md:pt-0">
         <a className="group md:-translate-x-3 hover:translate-x-1 hover:text-[#0094E7] duration-500"  href="">
             <span className='text-[#0094E7] hidden md:inline-block w-[10px!important] h-[3px] mr-[3px] mb-[3px] bg-sky-500/100 transform transition ease-in-out duration-1000'></span>
                    ব্লগ
@@ -56,7 +51,7 @@ export default function Footer() {
             <span className='text-[#0094E7] hidden md:inline-block w-[10px!important] h-[3px] mr-[3px] mb-[3px] bg-sky-500/100 transform transition ease-in-out duration-1000'></span>
                  ব্যবহারের শর্তাবলি</a>
         </div>
-        <div className="w-[100%] text-center md:text-left overflow-hidden flex flex-col gap-3 justify-items-left  pt-4 md:pt-0 ">
+        <div className="w-[100%] md:col-span-1 text-center md:text-left overflow-hidden flex flex-col gap-3 justify-items-left  pt-4 md:pt-0 ">
             <a className="group  md:-translate-x-3 hover:translate-x-1 hover:text-[#0094E7] duration-500"  href="">
             <span className='text-[#0094E7] hidden md:inline-block w-[10px!important] h-[3px] mr-[3px] mb-[3px] bg-sky-500/100 transform transition ease-in-out duration-1000'></span>
                   অফিস লগইন</a>
@@ -71,7 +66,7 @@ export default function Footer() {
 
                   
         </div>
-        <div className="w-[100%] sm:pr-4 grid grid-cols-1 justify-items-center pt-12 pb-12 md:pt-0 md:justify-items-end md:pb-0">
+        <div className="w-[100%] sm:pr-4 md:col-span-1 grid grid-cols-1 justify-items-center pt-12 pb-12 md:pt-0 md:justify-items-end md:pb-0">
             <p className="">কারিগরি সহযোগিতায়</p>
             <div className="mb-4">
                 <img className='p-2 sm:p-0' src="../images/mysoft-logo 1.png" alt="" />
@@ -100,7 +95,7 @@ export default function Footer() {
     </div>
 </div>
 
-<div className="flex justify-center text-center md:py-12 mb-10 theme_h3 font-bold">
+<div className="flex justify-center text-center md:pb-3 md:pt-10 theme_h3 font-bold">
     <small className=" p-2 ">কপিরাইট © ২০২৩ সর্বস্বত্ব সংরক্ষিত Mysoftheaven.com</small>
 </div>
 

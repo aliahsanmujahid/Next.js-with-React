@@ -7,6 +7,7 @@ export interface IUserApiResponse {
 }
 
 export interface IData {
+  totalConsultant: string,
   offset: string
   limit: string
   list: IUser[]

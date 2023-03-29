@@ -268,7 +268,7 @@ const SearchPage: NextPage<IPropTypes> = ({ data,error }) => {
 
 <div className="sm:flex text-[12px] font-bold">
 
-<aside id="cta-button-sidebar" className="text-[12px] font-bold row-span-3 inline-block max-[640px]:fixed max-[640px]:top-10 max-[640px]:left-0 z-40 sm:w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="cta-button-sidebar" className="z-[2000] sm:z-[0] text-[12px] font-bold row-span-3 inline-block max-[640px]:fixed max-[640px]:top-0 max-[640px]:left-0  sm:w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" >
   <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 ">
 
 
@@ -394,7 +394,7 @@ const SearchPage: NextPage<IPropTypes> = ({ data,error }) => {
       </div>
 
       <div>
-              <p className="py-1 px-2 pl-[0px!important]">802 পরামর্শদাতা</p>
+              <p className="py-1 px-2 pl-[0px!important]">{data?.totalConsultant} পরামর্শদাতা</p>
       </div>
 
 

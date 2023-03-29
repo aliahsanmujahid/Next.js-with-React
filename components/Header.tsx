@@ -47,7 +47,7 @@ export default function Header() {
 
             <li className= {"pl-4 pt-4 pb-0 cursor-pointer overflow-hidden hidden min-[540px]:block"}>
                 
-                 <button className="w-[100px] h-[30px] border rounded-full overflow-hidden leading-[0px]">
+                 <button className="w-[100px] bg-[#348739!important] h-[30px] border rounded-full overflow-hidden leading-none">
                    <span onClick={() => setLang('bang')} className= {"rounded-full px-4 py-1 font-bold bangla "  + (lang === 'bang' ? 'tactive' : '')} >বাং</span>
                    <span onClick={() => setLang('eng')} className= {"rounded-full  px-4 py-1 font-bold english " + (lang === 'eng' ? 'tactive' : '')} >EN</span>
                  </button>
@@ -349,7 +349,7 @@ export default function Header() {
 
             <li className="">
                   <button
-                        className= {" px-7 py-2 bg-[#0094E7] text-[16px] text-[#ffffff] font-bold rounded-lg " + (router.pathname === "/home" ? "bg-white text-gray-700" : "" )}>
+                        className= {" px-7 py-[10px] leading-none bg-[#348739!important] text-[16px] text-[#ffffff] font-bold rounded-lg " + (router.pathname === "/home" ? "bg-white text-gray-700" : "" )}>
                         
                         {lang === 'eng' ? (
                         'Let’s Connect'

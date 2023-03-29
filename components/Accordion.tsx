@@ -19,7 +19,7 @@ const Accordion = ({ values } : UserProps) => {
       <div id={"accordionExample"+values[0]?.id}>
 
 {values?.map((item , index) => 
-<div
+<div key={index}
 className="rounded mb-2 border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
 <h2 className="mb-0" id="hhh">
   <button

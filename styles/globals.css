@@ -1,44 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.maateen.me/kalpurush/font.css');
-
+/* @import url('https://fonts.maateen.me/kalpurush/font.css'); */
+/* 
 @font-face {
          font-family: kalpurush;
          src: url('../public/fonts/kalpurush/Kalpurush.ttf');
-}
-
-/* 
-*{
-   font-family: 'Kalpurush', Arial, sans-serif !important;
 } */
-.fa-solid, .fas {
-   font-family: "Font Awesome 6 Free"!important;
-}
-.fa-brands, .fab {
-   font-family: "Font Awesome 6 Brands"!important;
- }
-.fa {
-   font-family: var(--fa-style-family,"Font Awesome 6 Free")!important;
-}
+
 
 body{
    margin: 0;
    padding: 0;
    font-family: 'Kalpurush', Arial, sans-serif !important;
-  
+   overflow-x: hidden;
 }
 
-/* Changable Elements */
 
 .theme_h1{
-   font-family: 'Li Alinur Showpnocari A2';
+   font-family: 'Li Subha Shantiniketan Unicode';
    font-style: normal;
    font-weight: 700;
    font-size: 40px;
    line-height: 50px;
    letter-spacing: 5px;
    color: #000000;
+}
+.theme_h1_green{
+  font-family: 'Li Alinur Showpnocari A2';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 5px;
+  color: #348739;
+}
+
+.theme_h2_green{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+
+color: #348739;
 }
 .theme_h2{
   font-family: 'Noto Sans Kannada UI';
@@ -50,6 +55,9 @@ body{
   
   color: #000000;
 }
+
+
+
 .theme_h3{
   font-family: 'Noto Sans Bengali UI';
 font-style: normal;
@@ -61,6 +69,31 @@ letter-spacing: 0.1em;
 color: #000000;
 }
 
+
+.about_h1_green{
+  font-family: 'Li Alinur Showpnocari A2';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 47px;
+color: #348739;
+
+}
+
+.about_h2{
+  font-family: 'Li Subha Shantiniketan Unicode';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 48px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  
+  color: #000000;
+}
 
 
 
@@ -696,10 +729,10 @@ border-radius: 5px;
 .search_btn{
    display: flex;
 }
-.search_btn button{
-   padding: 5px 15px 5px 15px;
-   color: #ffffff;
-   background-color: #0094E7;
+.search_btn button,.button{
+   padding: 8px 15px 8px 15px;
+
+   background-color: #348739;
    border-radius: 5px;
 }
 .search_btn button:first-child{
@@ -817,11 +850,19 @@ border-radius: 5px;
 
  }
 
- @media (max-width: 760px) {
-  .theme_h1{
+ @media (max-width: 900px) {
+  .theme_h1,.theme_h1_green{
     font-size: 20px;
     line-height: 30px;
   }
+  .theme_h2{
+    font-size: 16px;
+  }
+  .about_h1_green,.about_h2{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   
  }
 
@@ -968,6 +1009,9 @@ margin-left: 0px;
 
 
 @media (max-width: 450px) {
+
+
+
    .contackform {
       padding: 5px;
    }
@@ -1008,6 +1052,22 @@ margin-left: 0px;
 }
 
 @media (max-width: 350px) {
+
+  .theme_h1,.theme_h1_green{
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .theme_h2{
+    font-size: 14px;
+  }
+  .about_h1_green,.about_h2{
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+
+
+  
 
    .filterimage{
       width: 100%;
@@ -1163,11 +1223,11 @@ margin-left: 0px;
 }
 
 .tactive{
-   background-color: #0094E7!important;
+   background-color: #348739!important;
    color: #FFFFFF!important;
 }
 .active{
-   color: #0094E7!important;
+   color: #348739!important;
 }
 
 .nav-button{

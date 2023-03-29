@@ -41,6 +41,22 @@ interface IPropTypes {
 
   const [nagorik, setNagorik] = useState<IFaq[]>([]);
 
+  const [carosel, setCarosel] = useState([
+    {img1:'../images/slider/img2.png',img2:'../images/slider/img2_.png',title:'সম্পূর্ণ ভূমিসেবা।',details:'দক্ষ ভূমি পরামর্শকদের সহায়তায় নাগরিকদের বিভিন্ন ধরনের ভূমিসেবা প্রদান করাই প্লাটফর্মটির মূল লক্ষ্য।'},
+    {img1:'../images/slider/img1.png',img2:'../images/slider/img1_.png',title:'আপনি কি নিষ্কন্টক (ভেজালবিহীন) জমি ক্রয়ের কথা ভাবছেন ?',details:'জমি ক্রয়ে মালিকানা যাচাই, রেকর্ড অর্থাৎ খতিয়ান, মৌজা, দাগ নম্বর এবং নকশা যাচাই করে জমি ক্রয় করতে এক্ষুনি রেজিস্ট্রেশন করে আমাদের ভূমি বিশেষজ্ঞদের পরামর্শ নিন।'},
+   {img1:'../images/slider/img3.png',img2:'../images/slider/img3_.png',title:'আপনি কি জমি রেজিস্ট্রেশনের খরচ নিয়ে চিন্তিত?',details:'কীভাবে আপনার জমি রেজিস্ট্রেশন করবেন বুঝতে পারছেন না? নির্ধারিত রেজিস্ট্রি ফি অনুযায়ী জমি রেজিস্ট্রি করতে এবং সেরা পরামর্শ পেতে যোগাযোগ করুন আমাদের ভূমি পরামর্শকদের সাথে।'},
+    {img1:'../images/slider/img4.png',img2:'../images/slider/img4_.png',title:'জমি ক্রয়ের পর নামজারি নিয়ে ভাবছেন?',
+       details:'যথা সময়ে, সঠিক উপায়ে এবং নির্ধারিত খরচে জমি নামজারি / খারিজ করতে এবং নামজারির অবস্থা জানতে আজই আমাদের ভূমি পরামর্শকদের পরামর্শ নিন।'},
+    {img1:'../images/slider/img3.png',img2:'../images/slider/img4_.png',
+     title:'আপনি কি আপনার জমির পর্চা/ খতিয়ান হারিয়ে ফেলেছেন?',
+     details:'আপনি জমির পর্চা / খতিয়ান, মৌজা ম্যাপ হারিয়ে ফেললে অথবা নতুন করে তুলতে আমাদের ভূমি পরামর্শকদের সাথে যোগাযোগ করুন। '},
+     {img1:'../images/slider/img4.png',img2:'../images/slider/img4_.png',
+     title:'আপনি কি ভূমি কর বা খাজনা পরিশোধ নিয়ে চিন্তিত?',
+     details:'ভূমি কর পরিশোধের সময় যেকোনো জটিলতায় এবং একের অধিক মালিকানাধীন জমির কর বা খাজনা প্রদানে নির্ভরযোগ্য এবং বিশ্বস্ত সেবা পেতে আমাদের ওয়েবসাইটে রেজিস্ট্রেশন করুন এবং নির্ভুল ভূমিসেবা গ্রহণ করুন। বিস্তারিত জানতে আমাদের পরামর্শকদের সাথে যোগাযোগ করুন। '},
+  
+   
+  ]);
+
     
   const [curds, setCurds] = useState([
     {img:'../images/clips/img1.png',title:'ভূমি রেজিস্ট্রেশন'}, {img:'../images/clips/img2.png',title:'ভূমি নামজারি'},
@@ -92,7 +108,7 @@ const options2 = {
     loop: true,
     nav: false,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout:2000,
     //animateOut: 'fadeOut',
     smartSpeed: 1000,
@@ -120,39 +136,7 @@ const options2 = {
         }
     },
 };
-const options3 = {
-    responsiveClass: true,
-    loop: true,
-    nav: false,
-    dots: true,
-    autoplay: false,
-    autoplayTimeout:2000,
-    //animateOut: 'fadeOut',
-    smartSpeed: 1000,
-    startPosition: 1,
-    center: true,
-    responsive: {
-        0: {
-            items: 1,
-        },
-        400: {
-            items: 1,
-        },
-        500: {
-          items: 1,
-        },
-        600: {
-            items: 1,
-        },
-        700: {
-            items: 1,
-        },
-        1000: {
-            items: 1,
 
-        }
-    },
-};
 useEffect(() => {
   
     if( data.error == '404' ){
@@ -168,22 +152,11 @@ useEffect(() => {
   return (
   
     <Layout>
- 
-
-
-
          
-   <section className="h-[99vh] slidersection p-0 pt-[160px] md:pt-[130px] mb-8">
+   <section className="w-full h-[99vh] slidersection p-0 pt-[160px] md:pt-[130px] mb-8">
 
 
-
-      <OwlCarousel className="h-[75vh] slider-items owl-carousel" {...options3}>
-
-          <Carosel/>
-          <Carosel/>
-          <Carosel/>
-
-      </OwlCarousel>
+          <Carosel  data={carosel} />
 
 
    </section>
@@ -196,7 +169,7 @@ useEffect(() => {
 
 
 
-<section className="w-[99%] sm:w-[90%] m-auto">
+<section className="w-full sm:w-[90%] m-auto">
 <div className="mt-12 mb-[20px] text-center">
     <p className="theme_h2 pb-2">
 
@@ -216,7 +189,7 @@ useEffect(() => {
 
 {curds?.map((item , index) => 
 
-<div className="cursor-pointer group w-full pt-6 pb-6 flex flex-col justify-center border border-solid border-[#0094E7] rounded  mb-5 hover:text-[#0094E7] transform transition ease-in-out duration-700">
+<div key={index} className="cursor-pointer group w-full pt-6 pb-6 flex flex-col justify-center border border-solid border-[#0094E7] rounded  mb-5 hover:text-[#0094E7] transform transition ease-in-out duration-700">
            
 <div className="text-center">
    <img src={item.img} className="group-hover:scale-x-[1.18] hover:scale-y-[1.18] w-20 m-auto" alt="" />
@@ -237,7 +210,7 @@ useEffect(() => {
 </div>
 
 <div className="text-center mb-8 mt-4">
-    <button className="bg-[#0094E7] px-5 py-3 text-white rounded-md text-[15px] leading-5 font-bold hover:bg-white hover:text-[#0094E7] border border-solid border-[#0094E7] hover:border hover:border-solid hover:border-[#0094E7] transition ease-in-out duration-700">আরো দেখুন</button>
+    <button className="button font-bold text-white">আরো দেখুন</button>
 </div>
 </section>
 
@@ -261,17 +234,17 @@ useEffect(() => {
 
     </div>
 </div>
-<div className="w-full py-6 justify-start bg-[#0094E7]">
+<div className="w-full py-6 justify-start bg-[#348739]">
  
    <div className=" w-[99%] sm:w-[90%] m-auto flex flex-col justify-start">
-    <h3 className="text-[15px] sm:text-[20px] mb-0 text-white font-medium">সেবার জন্য</h3>
+    <h3 className="text-[17px] sm:text-[20px] tracking-widest text-white">সেবার জন্য</h3>
     <div className="block">
-      <button className="px-8 py-2 bg-white rounded-md text-[#0094E7] text-[15px] font-bold">
-         <i className="text-[20px] fa-solid fa-phone mr-2"></i>
+      <button className="px-8 py-2 bg-white leading-none rounded-md text-[#348739] text-[15px] font-bold">
+         <i className="text-[17px] fa-solid fa-phone mr-2"></i>
         বিস্তারিত
       </button>
       <i className=" text-[20px] text-white ml-3 fa-brands fa-facebook-messenger"></i>
-      <i className=" text-[20px] ml-3 fa-brands fa-whatsapp text-[green]"></i>
+      <i className=" text-[20px] ml-3 fa-brands fa-whatsapp text-white"></i>
      
 
     </div>
@@ -331,7 +304,7 @@ useEffect(() => {
 
       <div className="grid justify-items-center p-5">
 <Link legacyBehavior href='/faq'>
-<button className="border border-[#0094E7] rounded-md p-2 text-[#0094E7] text-sm font-semibold">আরো দেখুন</button>
+<button className="button font-bold bg-[#ffffff!important] text-gray-600">আরো দেখুন</button>
 </Link>
 </div>
 </div>
@@ -465,7 +438,7 @@ useEffect(() => {
 
 <section>
 
-<div className="container mx-auto p-5 grid grid-cols-1 justify-items-center md:pt-12">
+<div className=" mx-auto p-5 grid grid-cols-1 justify-items-center md:pt-12">
 <h3 className="theme_h1 md:pb-3">আমাদের সেরা পরামর্শ পদ্ধতি</h3>
 <p className="theme_h2 ">বিশেষজ্ঞ পরিষেবা প্রদানকারীর  সমস্যার সমাধান নির্ধারণ</p>
 </div>
@@ -479,7 +452,7 @@ useEffect(() => {
     <p className="theme_h2 text-left">পর্যালোচনা এবং সেবা গ্রহণ. আমরা আপনার জন্য বিশেষজ্ঞ পরিষেবা প্রদানকারীর  সমস্যার সমাধান নির্ধারণ</p>
 </div>
 
-<button type="button" className="bg-[#348739] text-white font-bold  mt-2 p-2 px-4 py-[5px]  rounded-md md:hover:bg-[#FFFFFF] md:hover:text-[#0094E7] border border-[#0094E7] ">ভূমিসেবা যুক্ত হোন </button>
+<button type="button" className="bg-[#348739] text-white font-bold  mt-2 p-2 px-4 py-[5px]  rounded-md md:hover:bg-[#FFFFFF] md:hover:text-[#0094E7] border-2 border-[#348739] ">ভূমিসেবা যুক্ত হোন </button>
 </div>
 
 <div className="p-2">
