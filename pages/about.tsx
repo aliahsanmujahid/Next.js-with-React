@@ -57,7 +57,6 @@ export default function Home() {
 
 
 </p><br></br>
-<p className="para-3">
 
 
 {lang === 'eng' ? (
@@ -82,7 +81,6 @@ export default function Home() {
          </>
        )
 }
-  </p>
             </div>
 
             <div className="p-3">

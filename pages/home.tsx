@@ -5,14 +5,11 @@ import Layout from '@/components/Layout'
 import { useLang } from "@/hooks";
 import { useRouter } from 'next/router';
 import  Carosel  from "@/components/Carosel";
+import  Caroselc  from "@/components/Caroselc";
 import  Home_Carosel  from "@/components/Home_Carosel";
 import  Accordion  from "../components/Accordion";
 import { AxiosResponse } from 'axios';
 import { fetchFaqs } from '../http';
-
-// if (typeof window !== 'undefined') {
-//     window.$ = window.jQuery = require('jquery');
-// }
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -37,7 +34,21 @@ interface IPropTypes {
 
   const { LangInfo,HandleChange } = useLang();
   const { lang } = LangInfo;
-  const router = useRouter();
+  const [term, setTerm] = useState('')
+
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(term){
+      router.push(`/search?search=${term}&offset=0`)
+    }
+  }
+
+  const goFilter = ()  => {
+      router.push(`/search?search=${term}&offset=0`)
+  }
+
 
   const [nagorik, setNagorik] = useState<IFaq[]>([]);
 
@@ -136,6 +147,43 @@ const options2 = {
         }
     },
 };
+const options3 = {
+  responsiveClass: true,
+  loop: true,
+  nav: false,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout:3500,
+  animateOut: 'fadeOut',
+  smartSpeed: 3000,
+  startPosition: 0,
+  center: true,
+  mouseDrag:false,
+  touchDrag:false,
+  pullDrag:false,
+  freeDrag:false,
+  responsive: {
+      0: {
+          items: 1,
+      },
+      400: {
+          items: 1,
+      },
+      500: {
+        items: 1,
+      },
+      600: {
+          items: 1,
+      },
+      700: {
+          items: 1,
+      },
+      1000: {
+          items: 1,
+
+      }
+  },
+ };
 
 useEffect(() => {
   
@@ -155,16 +203,51 @@ useEffect(() => {
          
    <section className="w-full h-[99vh] slidersection p-0 pt-[160px] md:pt-[130px] mb-8">
 
+   <div className="relative">
 
-          <Carosel  data={carosel} />
+
+     <OwlCarousel className="h-[75vh] slider-items owl-carousel" {...options3}>
+
+ {carosel?.map((item , index) =>  
+       
+       <Carosel key={index} value={item} />
+
+  )} 
+
+
+
+
+     </OwlCarousel>
+
+     <div className="absolute left-[9%] md:left-[7%] top-[50%] bottom-[50%] w-[80%] sm:w-[40%] m-auto">
+<div className="py-4">
+
+
+ <form role="form" onSubmit={handleSubmit} className="z-10 relative hover:shadow-lg hover:shadow-blue-500/50 flex w-full bg-white rounded-full">
+   <input type="text" value={term} placeholder="Search Keyword" className="rounded px-3 py-1 sm:px-6 sm:py-2
+     border-2 border-gray-300 w-full text-gray-700 focus:outline-none" onChange={(e) => setTerm(e.target.value)} />
+   <button onClick={handleSubmit} className="text-[10px]  sm:text-[15px]  absolute right-2 top-3 min-[400px]:right-[16px] text-gray-500  font-semibold focus:outline-none">
+     <i className="fa-solid fa-magnifying-glass"></i>
+   </button>
+ </form>
+
+
+</div>
+
+<div className="search_btn justify-center min-[450px]:justify-start  text-center sm:text-left">
+
+ <button className="z-10 text-white" >{lang === "bang" ? "ভূমিসেবা":"Land service"}</button>
+ <button onClick={ goFilter} className="z-10 text-white" >{lang === "bang" ? "কনসালটেশন":"Consultation"}</button>
+
+</div>
+
+
+     </div> 
+
+  </div>
 
 
    </section>
-     
-
-
-
-
 
 
 
@@ -189,7 +272,7 @@ useEffect(() => {
 
 {curds?.map((item , index) => 
 
-<div key={index} className="cursor-pointer group w-full pt-6 pb-6 flex flex-col justify-center border border-solid border-[#0094E7] rounded  mb-5 hover:text-[#0094E7] transform transition ease-in-out duration-700">
+<div key={index} className="cursor-pointer group w-full pt-6 pb-6 flex flex-col justify-center border border-solid border-[#046900] rounded  mb-5 hover:text-[#0094E7] transform transition ease-in-out duration-700">
            
 <div className="text-center">
    <img src={item.img} className="group-hover:scale-x-[1.18] hover:scale-y-[1.18] w-20 m-auto" alt="" />
@@ -214,9 +297,9 @@ useEffect(() => {
 </div>
 </section>
 
-<section className="w-full sm:relative sm:mt-[0px] mb-[30px]">
+<section className="w-full sm:relative sm:mt-[100px] mb-[30px]">
 
-<img src="../images/Group 17.png" className="sm:absolute -right-[2vw] bottom-0 w-[90vw] sm:w-[50vw] m-auto" alt="" />
+<img src="../images/Group1627.png" className="sm:absolute right-[2vw] -bottom-[47px] w-[90vw] sm:w-[50vw] m-auto" alt="" />
   
 
 <div className="w-[99%] sm:w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 text-left">
@@ -226,10 +309,10 @@ useEffect(() => {
             আপনার কি ভূমিসেবার প্রয়োজন?
             </h1>
             <p className=" theme_h3">
-                ভূমি সংক্রান্ত সেবার জন্য আবেদন করুনভূমি সংক্রান্ত সেবার জন্য 
-                আবেদন করুনসংক্রান্ত সেবার জন্য আবেদন করুন ভূমি সংক্রান্ত সেবার
-                জন্য আবেদন করুনghyuভূমি সংক্রান্ত সেবার জন্য আবেদন করুনভূমি 
-                সংক্রান্ত সেবার জন্য আবেদন করুনসংক্র
+            ভূমি সম্পর্কিত যেকোনো জটিলতার সহজ সমাধান পেতে আমাদের সাইটটিতে আপনাকে স্বাগতম।
+             এখানে ভূমি নিবন্ধন, নামজারি, জমির খাজনা ,পর্চা, মিসকেস মামলা, দেওয়ানি মামলা,
+              ভূমি রাজস্ব মামলা, খাস জমি, ভূমি জরিপ, খতিয়ানের ভুল সংশোধন সংশ্লিষ্ট ভূমিসেবা 
+            সহ ভূমি বিষয়ে বিভিন্ন সেবা প্রদানে আমাদের পরামর্শকরা নিরলসভাবে সহযোগিতা করে যাচ্ছেন।
             </p>
 
     </div>
@@ -270,9 +353,17 @@ useEffect(() => {
         </div>
           
         <div className="mt-auto mb-auto sm:p-4">
-          <h1 className="theme_h1 mb-2">সম্পত্তি বেদখলে আপনার উপযুক্ত পদক্ষেপ কি ?</h1>   
-          <p className="theme_h3">মালিকানা ব্যক্তি সম্পত্তি জোরপূর্বক দখল এবং উচ্ছেদ করে, অননুমোদিতভাবে সেখানে উপস্থিতি প্রতিষ্ঠা করাকে বেদখল বলা হয়। জোরপূর্বক আপনার জমি দখল করা হলে প্রতিকারমূলক পদক্ষেপ যত দ্রুত সম্ভব নেয়া উচিত। "তামাদি আইন" অনুসারে, যদি কোন সম্পত্তি নির্দিষ্ট সময় কালীন, 
-তথা ১২ বছরের উর্ধে বেদখল থাকে এবং ইতিমদ্ধে যদি কোনও মামলা না করা হয় তবে উক্ত সম্পত্তির উপর বেদখলকারীর এক ধরণের মালিকানা স্বত্ব সৃষ্টি হয়। এ ধরনের মামলাকে সাধারণত স্বত্ব সাব্যস্ত খাস দখলের মামলা বলা হয়। </p>
+          <h1 className="theme_h1 mb-2">জোরপূর্বক বা বেআইনিভাবে কেউ কি আপনার সম্পত্তি দখল করেছে?</h1>   
+          <p className="theme_h3">
+          বেআইনিভাবে আপনার সম্পত্তি বেদখল হলে যত দ্রুত সম্ভব প্রতিকারমূলক ব্যবস্থা গ্রহণ করুন। মনে রাখবেন, একটি নির্দিষ্ট সময়ের জন্য আপনার সম্পত্তি কারো দখলে থাকলে সেই দখলকৃত সম্পত্তির উপর দখলদারের এক ধরনের মালিকানা স্বত্ব সৃষ্টি হয়। এর ফলে আপনার সম্পত্তি হারানোর আশঙ্কা থেকে যায়।  
+
+          <br /> 
+          <br />
+          
+          তাই, ভূমি বেদখলে আইনি মামলার বিস্তারিত তথ্য এবং আপনার করণীয় সম্পর্কে জানতে এখনই আমাদের ভূমি বিশেষজ্ঞদের পরামর্শ ও সহযোগিতা গ্রহণ করুন। 
+
+            
+          </p>
         </div>
       </div>
 

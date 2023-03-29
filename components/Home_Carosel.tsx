@@ -37,9 +37,8 @@ export default function Carosel() {
               <div className="text-center ">
                   
               <h3 className='mb-4 theme_h2 cursor-pointer'>
-              পরিষেবাটি পেতে আপনার সুবিধাজনক তারিখ এবং সময় বেছে নিন। তাদের রেটিং এর উপর ভিত্তি 
-              করে পরিষেবা প্রদানকারী নির্বাচন করুন।পরিষেবাটি পেতে আপনার সুবিধাজনক তারিখ এবং সময় বেছে নিন। তাদের রেটিং এর 
-              উপর ভিত্তি করে পরিষেবা প্রদানকারী নির্বাচন করুন।পরিষেবাটি পেতে আপনার সুবিধাজনক তারিখ
+              { lang === "bang" ? " পরিষেবাটি পেতে আপনার সুবিধাজনক তারিখ এবং সময় বেছে নিন " : "All land services at hand" }
+             
               </h3>
 
                   <div className='flex justify-center text-[15px] font-bold leading-6'>

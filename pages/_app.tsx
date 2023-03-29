@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
       
       <>
-        <NextNProgress startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+        <NextNProgress color="green" startPosition={0.3} stopDelayMs={200} height={3.2} showOnShallow={true} />
         <ContextProviders>
         <Component {...pageProps} />
         </ContextProviders>

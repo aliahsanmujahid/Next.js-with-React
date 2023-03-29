@@ -34,13 +34,13 @@ export default function Header() {
                <p className="ml-2 ">0153463463</p>
             </li>
             <li className="ml-2 pt-4 pb-0 leading-[38px] hidden min-[540px]:block">
-                  <a href="#" className="mr-3 text-size">
+                  <a  className="mr-3 text-size">
                         <i className="fa-brands fa-twitter"></i>
                   </a>
-                  <a href="#" className="mr-3 text-size">
+                  <a  className="mr-3 text-size">
                         <i className="fa-brands fa-youtube"></i>
                   </a>
-                  <a href="#" className="text-size">
+                  <a  className="text-size">
                         <i className="fa-brands fa-square-instagram"></i>
                   </a>
             </li>
@@ -69,7 +69,7 @@ export default function Header() {
                    <div className="flex items-center justify-between md:block">
 
 
-                       <a href="javascript:void(0)">
+                     
 
                        <Link legacyBehavior href='/home'>
 
@@ -77,7 +77,6 @@ export default function Header() {
                                  <img className="w-[100px] md:w-[200px]" src="/images/mlogo.png" alt="" />
                           
                       </Link>
-                       </a>
 
 
                        <div className="md:hidden">
@@ -127,7 +126,7 @@ export default function Header() {
                    >
 
                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                           <li className=" hover:text-indigo-200">
+                           <li className=" hover:text-[green]">
                            <Link legacyBehavior href='/home'>
                   <a onClick={() => setNavbar(!navbar)} className= { "text-[16px] font-medium " + (router.pathname === "/home" ? "active" : "" )}>
                         
@@ -140,7 +139,7 @@ export default function Header() {
                         </a>
                   </Link>
                            </li>
-                           <li className=" hover:text-indigo-200">
+                           <li className=" hover:text-[green]">
                            <Link legacyBehavior href='/faq'>
                   <a  onClick={() => setNavbar(!navbar)} className= { "text-[16px] font-medium " + (router.pathname === "/consultation" ? "active" : "" )}>
                         
@@ -153,7 +152,7 @@ export default function Header() {
                         </a>
                   </Link>
                            </li>
-                           <li className=" hover:text-indigo-200">
+                           <li className=" hover:text-[green]">
                            <Link legacyBehavior href='/about'>
                   <a  className= { "text-[16px] font-medium " + (router.pathname === "/consultation" ? "active" : "" )}>
                         
@@ -166,7 +165,7 @@ export default function Header() {
                         </a>
                   </Link>
                            </li>
-                           <li className=" hover:text-indigo-200">
+                           <li className=" hover:text-[green]">
                            <Link legacyBehavior href='/consultation'>
                   <a  className= { "text-[16px] font-medium " + (router.pathname === "/consultation" ? "active" : "" )}>
                         
@@ -251,7 +250,7 @@ export default function Header() {
                </div> 
 
                <ul className=" hidden md:flex md:text-end justify-end">
-            <li className="px-2 lg:px-7 py-2 text-[16px] hover:text-[#0094E7] transform hover:scale-110">
+            <li className="px-2 lg:px-7 py-2 text-[16px] hover:text-[green] transform hover:scale-110">
 
             <Link legacyBehavior href='/home'>
 
@@ -269,7 +268,7 @@ export default function Header() {
 
             </li>
 
-            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[#0094E7] transform hover:scale-110">
+            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[green] transform hover:scale-110">
 
             <Link legacyBehavior href='/about'>
                <a className={ "text-[16px] font-medium " + (router.pathname === "/about" ? "active" : "" ) }>
@@ -284,7 +283,7 @@ export default function Header() {
 
 </li>
 
-            <li className={ 'px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[#0094E7] hover:text-[#0094E7] transform hover:scale-110' }>
+            <li className={ 'px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[green] hover:text-[#0094E7] transform hover:scale-110' }>
 
                   <Link legacyBehavior href='/search?offset=0'>
                   <a  className= { "text-[16px] font-medium " + (router.pathname === "/search" ? " active" : "" )}>
@@ -301,7 +300,7 @@ export default function Header() {
 
             </li>
 
-            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold  hover:text-[#0094E7] transform hover:scale-110">
+            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold  hover:text-[green] transform hover:scale-110">
 
                   <Link legacyBehavior href='/policy'>
                   <a  className= {"text-[16px] font-medium " + (router.pathname === "/policy" ? "active" : "" )}>
@@ -317,7 +316,7 @@ export default function Header() {
                  
 
             </li>
-            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[#0094E7] transform hover:scale-110">
+            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[green] transform hover:scale-110">
 
                   <Link legacyBehavior href='/faq'>
                   <a className= {"text-[16px] font-medium " + (router.pathname === "/faq" ? "active" : "" )}>
@@ -331,7 +330,7 @@ export default function Header() {
                  </Link>
 
             </li>
-            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[#0094E7] transform hover:scale-110">
+            <li className="px-2 lg:px-7 py-2 text-[16px] font-bold hover:text-[green] transform hover:scale-110">
                   
                  <Link legacyBehavior href='/consultant'>
                        <a className={"text-[16px] font-medium " + (router.pathname === "/consultant" ? "active" : "" )}>

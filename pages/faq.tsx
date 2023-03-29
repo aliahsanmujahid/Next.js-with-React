@@ -47,7 +47,8 @@ const Faq: NextPage<IPropTypes> = ({ data }) => {
   
     <Layout>
 
-<div className="mx-auto pt-[75px] md:pt-[150px]">
+    <section>
+        <div className="mx-auto pt-[170px]">
         
 
         <div className="lists text-center">
@@ -143,11 +144,12 @@ const Faq: NextPage<IPropTypes> = ({ data }) => {
         <Contact vari={2}/>
 
 
+        </div>
+    </section>
 
 
 
-
-        <section className="w-full sm:relative sm:mt-[0px] mb-[30px] sm:py-6">
+    <section className="w-full sm:relative pt-6 sm:mt-[100px] mb-[30px]">
 
 <img src="../images/Group 17.png" className="sm:absolute -right-[2vw] bottom-0 w-[90vw] sm:w-[50vw] m-auto" alt="" />
   
@@ -159,25 +161,25 @@ const Faq: NextPage<IPropTypes> = ({ data }) => {
             আপনার কি ভূমিসেবার প্রয়োজন?
             </h1>
             <p className=" theme_h3">
-                ভূমি সংক্রান্ত সেবার জন্য আবেদন করুনভূমি সংক্রান্ত সেবার জন্য 
-                আবেদন করুনসংক্রান্ত সেবার জন্য আবেদন করুন ভূমি সংক্রান্ত সেবার
-                জন্য আবেদন করুনghyuভূমি সংক্রান্ত সেবার জন্য আবেদন করুনভূমি 
-                সংক্রান্ত সেবার জন্য আবেদন করুনসংক্র
+            ভূমি সম্পর্কিত যেকোনো জটিলতার সহজ সমাধান পেতে আমাদের সাইটটিতে আপনাকে স্বাগতম।
+             এখানে ভূমি নিবন্ধন, নামজারি, জমির খাজনা ,পর্চা, মিসকেস মামলা, দেওয়ানি মামলা,
+              ভূমি রাজস্ব মামলা, খাস জমি, ভূমি জরিপ, খতিয়ানের ভুল সংশোধন সংশ্লিষ্ট ভূমিসেবা 
+            সহ ভূমি বিষয়ে বিভিন্ন সেবা প্রদানে আমাদের পরামর্শকরা নিরলসভাবে সহযোগিতা করে যাচ্ছেন।
             </p>
 
     </div>
 </div>
-<div className="w-full py-6 justify-start bg-[#0094E7]">
+<div className="w-full py-6 justify-start bg-[#348739]">
  
    <div className=" w-[99%] sm:w-[90%] m-auto flex flex-col justify-start">
-    <h3 className="text-[15px] sm:text-[20px] mb-0 text-white font-medium">সেবার জন্য</h3>
+    <h3 className="text-[17px] sm:text-[20px] tracking-widest text-white">সেবার জন্য</h3>
     <div className="block">
-      <button className="px-8 py-2 bg-white rounded-md text-[#0094E7] text-[15px] font-bold">
-         <i className="text-[20px] fa-solid fa-phone mr-2"></i>
+      <button className="px-8 py-2 bg-white leading-none rounded-md text-[#348739] text-[15px] font-bold">
+         <i className="text-[17px] fa-solid fa-phone mr-2"></i>
         বিস্তারিত
       </button>
       <i className=" text-[20px] text-white ml-3 fa-brands fa-facebook-messenger"></i>
-      <i className=" text-[20px] ml-3 fa-brands fa-whatsapp text-[green]"></i>
+      <i className=" text-[20px] ml-3 fa-brands fa-whatsapp text-white"></i>
      
 
     </div>
@@ -188,19 +190,7 @@ const Faq: NextPage<IPropTypes> = ({ data }) => {
 </div>
 
 
-</section>
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+    </section>
 
       
    

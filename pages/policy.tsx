@@ -37,7 +37,7 @@ export default function Home() {
   </div>
 
   <div className="sm:col-span-1">
-  <img className="" src="/images/policy.png" alt="Modern building architecture" />
+       <img className="" src="/images/policy.png" alt="Modern building architecture" />
      
   </div>
 </div>
@@ -89,13 +89,29 @@ export default function Home() {
     <h1 className="about_h1_green mb-2">গোপনীয়তা:</h1>   
     <p className="theme_h3">ব্যবহারকারীর ব্যক্তিগত তথ্য এবং ভূমিসেবা গ্রহণে প্রয়োজনীয় কাগজপত্র সবকিছুই গোপন রাখা হয়। এ সকল তথ্য কোনো তৃতীয় ব্যক্তির নিকট হস্তান্তর করা হবে না। অনলাইন ফর্ম সাবমিশন, একাউন্ট তথ্য হালনাগাদ, সেবা অর্ডার এবং ব্যবহারকারীর
      অন্যান্য সংবেদনশীল তথ্যগুলো সুরক্ষার ক্ষেত্রে সচেতনতা এবং নিরাপত্তা প্রদান করা হবে।</p>
+     
+     <br />
+    
+
+     
+    <h1 className="theme_h1_green mb-2">প্রয়োজনীয় কাগজপত্র</h1>   
+    <ul className="theme_h3 list-disc ml-6">
+             <li> জাতীয় পরিচয়পত্রের কপি </li>
+            <li>সিভি </li>
+          <li> ভূমি বিষয়ে ইতিপূর্বে  কোন কাজ করা থাকলে তার প্রমানক </li>
+         <li>প্রফেশনাল সার্টিফিকেটের কপি </li>
+         
+         <li> একাডেমিক সার্টিফিকেটের কপি </li>
+          </ul>
   </div>
+
+  
 </div>
 
 </section>
 
 
-<section className="w-full mx-auto py-5" >
+{/* <section className="w-full mx-auto py-5" >
 
 <div className="container p-1 m-auto grid ">
     
@@ -114,7 +130,7 @@ export default function Home() {
 
 </div>
 
-</section>
+</section> */}
       
     </Layout>
 
